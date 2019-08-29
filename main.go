@@ -21,7 +21,7 @@ type Message struct {
 func main() {
 	hyperledger.StartFabric()
 
-	hyperledger.WriteTrans("1", "bitcoin BTC")
+	hyperledger.WriteTrans("1", "bitcoin BTC111111111")
 	hyperledger.WriteTrans("2", "ethereum ETH")
 	hyperledger.WriteTrans("3", "hyperledger HPL")
 	hyperledger.WriteTrans("4", "eos")
