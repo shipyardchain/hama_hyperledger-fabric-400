@@ -21,9 +21,9 @@ type Message struct {
 func main() {
 	hyperledger.StartFabric()
 
-	hyperledger.WriteTrans("1", "bitcoin")
-	hyperledger.WriteTrans("2", "ethereum")
-	hyperledger.WriteTrans("3", "hyperledger")
+	hyperledger.WriteTrans("1", "bitcoinnnnn")
+	hyperledger.WriteTrans("2", "ethereummmmmmm")
+	hyperledger.WriteTrans("3", "hyperledgerrrrr")
 	hyperledger.WriteTrans("4", "eos")
 
 	time.Sleep(1 * time.Second)
