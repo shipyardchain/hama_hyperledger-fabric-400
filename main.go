@@ -8,13 +8,12 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/gorilla/mux"
-	"github.com/hyperledger-fabric-400/hyperledger"
+	"github.com/shipyardchain/hama_hyperledger-fabric-400/hyperledger"
+	mux "github.com/shipyardchain/hama_mux"
 )
 
-
 type Message struct {
-	key string
+	key   string
 	value string
 }
 
@@ -22,7 +21,7 @@ type Message struct {
 func main() {
 	hyperledger.StartFabric()
 
-	hyperledger.WriteTrans("1","bitcoin")
+	hyperledger.WriteTrans("1", "bitcoin")
 	hyperledger.WriteTrans("2", "ethereum")
 	hyperledger.WriteTrans("3", "hyperledger")
 	hyperledger.WriteTrans("4", "eos")
@@ -88,7 +87,7 @@ func writeLetter(w http.ResponseWriter, r *http.Request) {
 	}
 	defer r.Body.Close()
 
-	result := hyperledger.WriteTrans(msg.key,msg.value)
+	result := hyperledger.WriteTrans(msg.key, msg.value)
 	respondWithJSON(w, r, http.StatusCreated, result)
 
 }
