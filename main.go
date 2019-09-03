@@ -22,19 +22,21 @@ func main() {
 	hyperledger.StartFabric()
 
 	hyperledger.WriteTrans("1", "bitcoin BTC111111111")
-	hyperledger.WriteTrans("2", "ethereum ETH")
+	hyperledger.WriteTrans("2", "eos")
 	hyperledger.WriteTrans("3", "hyperledger HPL")
-	hyperledger.WriteTrans("4", "eos")
+	hyperledger.WriteTrans("4", "ethereum ETH")
 
 	time.Sleep(1 * time.Second)
 
 	result1 := hyperledger.GetTrans("1")
 	result2 := hyperledger.GetTrans("2")
 	result3 := hyperledger.GetTrans("3")
+	result4 := hyperledger.GetTrans("4")
 
 	fmt.Printf("key1 : %s \n", result1)
-	fmt.Printf("key2 : %s \n", result2)
+	fmt.Printf("key2 : %s \n", result4)
 	fmt.Printf("key3 : %s \n", result3)
+	fmt.Printf("key4 : %s \n", result2)
 
 	//web_server_run()
 }
